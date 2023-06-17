@@ -2,21 +2,29 @@
   <q-layout view="lHh Lpr lFf">
     <q-header elevated>
       <q-toolbar>
-        <q-btn flat dense  color="cyan-10" round icon="menu" aria-label="Menu" @click="toggleLeftDrawer" />
+        <q-btn
+          flat
+          dense
+          color="cyan-10"
+          round
+          icon="menu"
+          aria-label="Menu"
+          @click="toggleLeftDrawer"
+        />
 
-        <q-toolbar-title>
-          Memorize
-        </q-toolbar-title>
+        <q-toolbar-title> Memorize {{ myStore.alizoka }}</q-toolbar-title>
         <div>hi hello</div>
       </q-toolbar>
     </q-header>
 
     <q-drawer v-model="leftDrawerOpen" show-if-above bordered>
       <q-list>
-        <q-item-label header>
-          Essential Links
-        </q-item-label>
-        <EssentialLink v-for="link in essentialLinks" :key="link.title" v-bind="link" />
+        <q-item-label header> Essential Links </q-item-label>
+        <EssentialLink
+          v-for="link in essentialLinks"
+          :key="link.title"
+          v-bind="link"
+        />
       </q-list>
     </q-drawer>
 
@@ -26,53 +34,56 @@
   </q-layout>
 </template>
 <style lang="scss">
-.q-layout__section--marginal  {
-  background-color:#057d83 ;
+.q-layout__section--marginal {
+  background-color: #057d83;
 }
 </style>
 <script>
-import { defineComponent, ref } from 'vue'
-import EssentialLink from 'components/EssentialLink.vue'
+import { defineComponent, ref } from "vue";
+import EssentialLink from "components/EssentialLink.vue";
+import { myStore } from "../store/myStore";
 
 const linksList = [
   {
-    title: 'Docs',
-    caption: 'quasar.dev',
-    icon: 'school',
-    link: 'https://quasar.dev'
+    title: "Docs",
+    caption: "quasar.dev",
+    icon: "school",
+    link: "https://quasar.dev",
   },
   {
-    title: 'Github',
-    caption: 'github.com/quasarframework',
-    icon: 'code',
-    link: 'https://github.com/quasarframework'
+    title: "Github",
+    caption: "github.com/quasarframework",
+    icon: "code",
+    link: "https://github.com/quasarframework",
   },
   {
-    title: 'Discord Chat Channel',
-    caption: 'chat.quasar.dev',
-    icon: 'chat',
-    link: 'https://chat.quasar.dev'
+    title: "Discord Chat Channel",
+    caption: "chat.quasar.dev",
+    icon: "chat",
+    link: "https://chat.quasar.dev",
   },
-]
+];
 
 export default defineComponent({
-  name: 'MainLayout',
+  name: "MainLayout",
 
   components: {
-    EssentialLink
+    EssentialLink,
   },
 
   setup() {
-
-    const leftDrawerOpen = ref(false)
-    console.log(leftDrawerOpen.value)
+    const leftDrawerOpen = ref(false);
+    console.log(leftDrawerOpen.value);
     const toggleLeftDrawer = function () {
-      leftDrawerOpen.value = !leftDrawerOpen.value
-    }
+      leftDrawerOpen.value = !leftDrawerOpen.value;
+    };
+
     return {
       essentialLinks: linksList,
-      leftDrawerOpen,toggleLeftDrawer,
-    }
-  }
-})
+      leftDrawerOpen,
+      toggleLeftDrawer,
+      myStore,
+    };
+  },
+});
 </script>
