@@ -1,6 +1,5 @@
+import { reactive } from 'vue'
 
-import { ref } from 'vue'
-
-export const myStore = ref({
+export const myStore = reactive({
   alizoka: "علی ذکایی"
 })

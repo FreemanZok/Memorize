@@ -28,7 +28,7 @@
         <q-carousel-slide name="style" class="column no-wrap flex-center">
           <q-icon name="style" size="56px" />
           <div class="q-mt-md text-center">
-            {{ myStore.alizoka }}
+            {{ $ali.alizoka }}
           </div>
         </q-carousel-slide>
         <q-carousel-slide name="tv" class="column no-wrap flex-center">
@@ -104,7 +104,7 @@
 </template>
 
 <script>
-import { myStore } from "../store/myStore";
+
 import { defineComponent, ref, } from "vue";
 export default defineComponent({
   name: "IndexPage",
@@ -115,11 +115,10 @@ export default defineComponent({
       maximizedToggle: ref(true),
       slide: ref("style"),
       lorem: "bagher",
-      myStore,
     };
   },
   mounted() {
-    this.myStore.alizoka = "bagher";
+    this.$ali.alizoka = "نادر ";
   },
 });
 </script>

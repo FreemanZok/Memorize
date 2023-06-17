@@ -13,7 +13,6 @@
         />
 
         <q-toolbar-title> Memorize {{ myStore.alizoka }}</q-toolbar-title>
-        <div>hi hello</div>
       </q-toolbar>
     </q-header>
 
