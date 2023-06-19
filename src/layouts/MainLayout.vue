@@ -2,30 +2,61 @@
   <q-layout view="lHh Lpr lFf">
     <q-header elevated>
       <q-toolbar>
-        <q-btn
-          flat
-          dense
-          color="cyan-10"
-          round
-          icon="menu"
-          aria-label="Menu"
-          @click="toggleLeftDrawer"
-        />
+        <q-btn class="side-menu-button" flat dense color="cyan-10" round icon="menu" aria-label="Menu"
+          @click="drawer = !drawer" />
 
         <q-toolbar-title> Memorize {{ myStore.alizoka }}</q-toolbar-title>
       </q-toolbar>
     </q-header>
+    <q-drawer v-model="drawer" show-if-above  :mini="miniState" @mouseover="miniState = false" @mouseout="miniState = true"
+      :width="200" :breakpoint="500" bordered :class="$q.dark.isActive ? 'bg-grey-9' : 'bg-grey-3'">
+      <q-scroll-area class="fit" :horizontal-thumb-style="{ opacity: 0 }">
+        <q-list padding>
+          <q-item clickable v-ripple>
+            <q-item-section avatar>
+              <q-icon name="inbox" />
+            </q-item-section>
 
-    <q-drawer v-model="leftDrawerOpen" show-if-above bordered>
-      <q-list>
-        <q-item-label header> Essential Links </q-item-label>
-        <EssentialLink
-          v-for="link in essentialLinks"
-          :key="link.title"
-          v-bind="link"
-        />
-      </q-list>
+            <q-item-section>
+              Inbox
+            </q-item-section>
+          </q-item>
+
+          <q-item active clickable v-ripple>
+            <q-item-section avatar>
+              <q-icon name="star" />
+            </q-item-section>
+
+            <q-item-section>
+              Star
+            </q-item-section>
+          </q-item>
+
+          <q-item clickable v-ripple>
+            <q-item-section avatar>
+              <q-icon name="send" />
+            </q-item-section>
+
+            <q-item-section>
+              Send
+            </q-item-section>
+          </q-item>
+
+          <q-separator />
+
+          <q-item clickable v-ripple>
+            <q-item-section avatar>
+              <q-icon name="drafts" />
+            </q-item-section>
+
+            <q-item-section>
+              Drafts
+            </q-item-section>
+          </q-item>
+        </q-list>
+      </q-scroll-area>
     </q-drawer>
+
 
     <q-page-container>
       <router-view />
@@ -38,7 +69,7 @@
 }
 </style>
 <script>
-import { defineComponent, ref } from "vue";
+import { defineComponent, ref, watch } from "vue";
 import EssentialLink from "components/EssentialLink.vue";
 import { myStore } from "../store/myStore";
 
@@ -71,18 +102,18 @@ export default defineComponent({
   },
 
   setup() {
-    const leftDrawerOpen = ref(false);
-    console.log(leftDrawerOpen.value);
-    const toggleLeftDrawer = function () {
-      leftDrawerOpen.value = !leftDrawerOpen.value;
+
+    const drawer = ref(false)
+    watch(drawer, (hi, newX) => {
+      console.log(`x is ${newX} and ${hi}`)
+    })
+    return {
+      myStore,
+      drawer,
+      miniState: ref(true)
     };
 
-    return {
-      essentialLinks: linksList,
-      leftDrawerOpen,
-      toggleLeftDrawer,
-      myStore,
-    };
   },
+
 });
 </script>
