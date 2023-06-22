@@ -4,7 +4,7 @@
       <q-page-container>
         <router-view />
       </q-page-container>
-      Test.vue
+      hello from layout test.vue
     </div>
   </q-layout>
 </template>

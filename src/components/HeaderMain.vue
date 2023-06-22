@@ -1,27 +1,20 @@
 <template>
-  <div class="HeaderMain">
-    <q-layout view="lHh Lpr lFf">
-      <HeaderMain />
-      <q-page-container>
-        <router-view />
-      </q-page-container>
-    </q-layout>
-  </div>
+    <q-header elevated>
+      <q-toolbar>
+        <q-btn class="side-menu-button" flat dense color="cyan-10" round icon="menu" aria-label="Menu"
+          @click="drawer = !drawer" />
+        <q-toolbar-title> Memorize</q-toolbar-title>
+      </q-toolbar>
+    </q-header>
 </template>
-<style lang="scss">
-.q-layout__section--marginal {
-  background-color: #164b54;
-}
-</style>
 <script>
 import { defineComponent, ref, watch } from "vue";
 import { myStore } from "../store/myStore";
-import HeaderMain from "../components/HeaderMain.vue"
+
 export default defineComponent({
   name: "MainLayout",
 
   components: {
-    HeaderMain
   },
 
   setup() {
@@ -33,10 +26,15 @@ export default defineComponent({
     return {
       myStore,
       drawer,
-      miniState: ref(true)
     };
 
   },
 
 });
 </script>
+
+<style lang="scss">
+.q-layout__section--marginal {
+  background-color: #164b54;
+}
+</style>

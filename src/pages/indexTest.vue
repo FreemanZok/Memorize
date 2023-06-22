@@ -1,8 +1,6 @@
 <template>
   <div class="indexTest">
-    <div>
-      من جابر هستم
-    </div>
+   hello from page indexTest
   </div>
 </template>
 
@@ -15,21 +13,18 @@ export default defineComponent({
   components: {},
   setup() {
     return {
-      dialog: ref(false),
-      maximizedToggle: ref(true),
-      slide: ref("style"),
-      lorem: "bagher",
+
     };
   },
   mounted() {
-    alert("this is IndexTest.vue")
+    // alert("this is IndexTest.vue")
   },
 });
 </script>
 <style lang="scss" scoped>
 .indexTest {
   position: relative;
-  min-height: 88vh;
+
 
   .startButton-wrap {
     position: absolute;

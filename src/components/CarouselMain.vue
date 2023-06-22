@@ -38,33 +38,7 @@
         </q-carousel-slide>
       </q-carousel>
     </div>
-    <div class="dialog">
-      <q-dialog v-model="dialog" persistent :maximized="maximizedToggle" transition-show="slide-up"
-        transition-hide="slide-down">
-        <q-card class="bg-primary text-white">
-          <q-bar>
-            <q-space />
 
-            <q-btn dense flat icon="minimize" @click="maximizedToggle = false" :disable="!maximizedToggle">
-              <q-tooltip v-if="maximizedToggle" class="bg-white text-primary">Minimize</q-tooltip>
-            </q-btn>
-            <q-btn dense flat icon="crop_square" @click="maximizedToggle = true" :disable="maximizedToggle">
-              <q-tooltip v-if="!maximizedToggle" class="bg-white text-primary">Maximize</q-tooltip>
-            </q-btn>
-            <q-btn dense flat icon="close" v-close-popup>
-              <q-tooltip class="bg-white text-primary">Close</q-tooltip>
-            </q-btn>
-          </q-bar>
-
-          <q-card-section>
-            <div class="text-h6 text-center">Alert</div>
-          </q-card-section>
-
-          <div>
-          </div>
-        </q-card>
-      </q-dialog>
-    </div>
   </div>
 </template>
 
