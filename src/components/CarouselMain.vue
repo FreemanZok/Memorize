@@ -20,7 +20,6 @@
             <audio controls autoplay>
               <source src="horse.ogg" type="audio/ogg">
               <!-- <source src="../assets/Holy_Ghost_Hold_On_We_re_Going_Home_Cover_.mp3" type="audio/mpeg"> -->
-              Your browser does not support the audio element.
             </audio>
           </q-img>
         </q-carousel-slide>
