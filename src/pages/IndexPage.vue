@@ -197,7 +197,6 @@ export default defineComponent({
     };
   },
   mounted() {
-    this.$ali.alizoka = "نادر ";
   },
 });
 </script>
