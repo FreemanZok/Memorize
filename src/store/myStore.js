@@ -5,7 +5,7 @@ const MainList = [
     // text_en:"anew",
     // voice_en:"دوباره",
     voice_en: "",
-    picture: "how-to-say-again-in-japanese.jpg",
+    picture: "erneut.jpg",
   },
   {
     word: "hochladen",
@@ -13,7 +13,7 @@ const MainList = [
     // text_en:"anew",
     // voice_en:"دوباره",
     voice_en: "hochladen.mp3",
-    picture: "",
+    picture: "hochladen.png",
   },
   {
     word: "herunterladen",
@@ -21,15 +21,15 @@ const MainList = [
     // text_en:"anew",
     // voice_en:"دوباره",
     voice_en: "herunterladen.mp3",
-    picture: "",
+    picture: "herunterladen.png",
   },
   {
     word: "Dorf",
     text_fa: "روستا",
     // text_en:"anew",
     // voice_en:"دوباره",
-    voice_en: "",
-    picture: "Dorf.mp3",
+    voice_en: "Dorf.mp3",
+    picture: "dorf.jpg",
   },
   {
     word: "Freunde",
@@ -37,7 +37,7 @@ const MainList = [
     // text_en:"anew",
     // voice_en:"دوباره",
     voice_en: "Freunde.mp3",
-    picture: "",
+    picture: "freunde.jpg",
   },
   {
     word: "miteinander",
@@ -45,7 +45,15 @@ const MainList = [
     // text_en:"anew",
     // voice_en:"دوباره",
     voice_en: "miteinander.mp3",
-    picture: "",
+    picture: "miteinander.jpg",
+  },
+  {
+    word: "besprechen",
+    text_fa: "بحث و گفتگو",
+    // text_en:"anew",
+    // voice_en:"دوباره",
+    voice_en: "miteinander.mp3",
+    picture: "besprechen.jpg",
   },
 ];
 
