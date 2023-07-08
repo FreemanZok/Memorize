@@ -1,65 +1,10 @@
-// import { reactive } from "vue";
-
-// const salam = reactive({
-//   MainList: [
-//     {
-//       word: "erneut",
-//       text_fa: "دوباره",
-//       // text_en:"anew",
-//       // voice_en:"دوباره",
-//       voice_fa: "",
-//       picture: "how-to-say-again-in-japanese.jpg",
-//     },
-//     {
-//       word: "hochladen",
-//       text_fa: "آپلود",
-//       // text_en:"anew",
-//       // voice_en:"دوباره",
-//       voice_fa: "",
-//       picture: "",
-//     },
-//     {
-//       word: "herunterladen",
-//       text_fa: "دانلود",
-//       // text_en:"anew",
-//       // voice_en:"دوباره",
-//       voice_fa: "",
-//       picture: "",
-//     },
-//     {
-//       word: "Dorf",
-//       text_fa: "روستا",
-//       // text_en:"anew",
-//       // voice_en:"دوباره",
-//       voice_fa: "",
-//       picture: "",
-//     },
-//     {
-//       word: "Freunde",
-//       text_fa: "دوستان",
-//       // text_en:"anew",
-//       // voice_en:"دوباره",
-//       voice_fa: "",
-//       picture: "",
-//     },
-//     {
-//       word: "miteinander",
-//       text_fa: "به اشتراک",
-//       // text_en:"anew",
-//       // voice_en:"دوباره",
-//       voice_fa: "",
-//       picture: "",
-//     },
-//   ],
-// });
-
 const MainList = [
   {
     word: "erneut",
     text_fa: "دوباره",
     // text_en:"anew",
     // voice_en:"دوباره",
-    voice_fa: "",
+    voice_en: "",
     picture: "how-to-say-again-in-japanese.jpg",
   },
   {
@@ -67,7 +12,7 @@ const MainList = [
     text_fa: "آپلود",
     // text_en:"anew",
     // voice_en:"دوباره",
-    voice_fa: "",
+    voice_en: "hochladen.mp3",
     picture: "",
   },
   {
@@ -75,7 +20,7 @@ const MainList = [
     text_fa: "دانلود",
     // text_en:"anew",
     // voice_en:"دوباره",
-    voice_fa: "",
+    voice_en: "herunterladen.mp3",
     picture: "",
   },
   {
@@ -83,15 +28,15 @@ const MainList = [
     text_fa: "روستا",
     // text_en:"anew",
     // voice_en:"دوباره",
-    voice_fa: "",
-    picture: "",
+    voice_en: "",
+    picture: "Dorf.mp3",
   },
   {
     word: "Freunde",
     text_fa: "دوستان",
     // text_en:"anew",
     // voice_en:"دوباره",
-    voice_fa: "",
+    voice_en: "Freunde.mp3",
     picture: "",
   },
   {
@@ -99,7 +44,7 @@ const MainList = [
     text_fa: "به اشتراک",
     // text_en:"anew",
     // voice_en:"دوباره",
-    voice_fa: "",
+    voice_en: "miteinander.mp3",
     picture: "",
   },
 ];

@@ -5,4 +5,3 @@ export default boot(({ app }) => {
   app.config.globalProperties.$myStore = [...myStore]
 })
 
-// export { myStore }
